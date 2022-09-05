@@ -18,3 +18,9 @@ jobs:
         with:
         # Semantic version range syntax or exact version of a dotnet version
          dotnet-version: '3.x'
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build
+      - name: Test with the dotnet CLI
+        run: dotnet test
